@@ -1,0 +1,43 @@
+description: Configuration file for checklist::check_pkg()
+package: no
+allowed:
+  warnings: []
+  notes: []
+citation_roles:
+- aut
+- cre
+required:
+- checklist
+- filename conventions
+- license
+- lintr
+- spelling
+spelling:
+  default: nl-BE
+  ignore:
+  - .github
+  - LICENSE.md
+  other:
+    en-GB:
+    - source/report/en/abstract.md
+    - source/report/en/appendix-first.qmd
+    - source/report/en/appendix-second.qmd
+    - source/report/en/boxes.qmd
+    - source/report/en/citations.md
+    - source/report/en/code-figure.qmd
+    - source/report/en/code-table.qmd
+    - source/report/en/code.qmd
+    - source/report/en/crossreference.md
+    - source/report/en/equations.md
+    - source/report/en/fonts.qmd
+    - source/report/en/headings.qmd
+    - source/report/en/index.md
+    - source/report/en/introduction.md
+    - source/report/en/lists.qmd
+    - source/report/en/pdf-extra.md
+    - source/report/en/recommendations.qmd
+    - source/report/en/references.md
+    - source/report/en/resume.md
+    - source/report/en/samenvatting.md
+    - source/report/en/static-figure.md
+    - source/report/en/static-table.md
