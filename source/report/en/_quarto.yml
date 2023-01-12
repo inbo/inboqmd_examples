@@ -1,0 +1,104 @@
+execute:
+  freeze: auto
+
+project:
+  type: book
+  output-dir: "../../../output/report/en"
+  preview:
+    port: 4200
+    browser: true
+
+lang: en-GB
+
+book:
+  title: "Example report using inboqmd"
+  subtitle: "English version using the corporate identity of the Flemish government"
+  author:
+  - firstname: Thierry
+    name: Onkelinx
+    email: thierry.onkelinx@inbo.be
+    orcid: 0000-0001-8804-4216
+    corresponding: true
+  doi: "10.5281/zenodo.842223"
+  chapters:
+    - "index.md"
+    - "abstract.md"
+    - "samenvatting.md"
+    - "resume.md"
+    - "recommendations.qmd"
+    - "introduction.md"
+    - part: "Typography"
+      chapters:
+        - "headings.qmd"
+        - "fonts.qmd"
+        - "lists.qmd"
+        - "boxes.qmd"
+    - part: "Other elements"
+      chapters:
+        - "crossreference.md"
+        - "static-figure.md"
+        - "static-table.md"
+        - "equations.md"
+        - "citations.md"
+        - "language.md"
+        - "pdf-extra.md"
+    - part: "Code generated content"
+      chapters:
+        - "code.qmd"
+        - "code-figure.qmd"
+        - "code-table.qmd"
+    - "references.md"
+  appendices:
+    - "appendix-first.qmd"
+    - "appendix-second.qmd"
+  sidebar:
+    logo: cover.png
+  site-url: https://inbo.github.io/inboqmd-examples/source/report/en/
+  output-file: flanders-report
+  repo-url: https://github.com/inbo/inboqmd-examples/
+  repo-subdir: source/en/
+  repo-actions: [source, issue, edit]
+  page-navigation: true
+  search: true
+  downloads: [pdf, epub]
+  sharing: [twitter, linkedin, facebook]
+
+bibliography: ../../common.bib
+
+inboqmd:
+  shortauthor: Onkelinx, T.
+  reviewer:
+  - firstname: Floris
+    name: Vanderhaeghe
+    email: floris.vanderhaeghe@inbo.be
+    orcid: 0000-0002-6378-6229
+  year: 2022
+  cover: cover.pdf
+  cover-photo: https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227
+  cover-description: Detail of a leaf. Photo by [Skyler Ewing](https://www.pexels.com/nl-nl/@skyler-ewing-266953?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) via [Pexels](https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
+  reportnr: 99999
+  depotnr: D/2021/999999/999999
+  ordernr: The optional order number
+  client:
+    - INBO Brussel
+    - VAC Brussel ‐ Herman Teirlinck
+    - Havenlaan 88 bus 73
+    - 1000 Brussel
+    - https://www.vlaanderen.be/inbo/en-gb
+  client-logo: ../../logo.jpg
+  cooperation:
+    - INBO Brussel
+    - VAC Brussel ‐ Herman Teirlinck
+    - Havenlaan 88 bus 73
+    - 1000 Brussel
+    - https://www.vlaanderen.be/inbo/en-gb
+  cooperation-logo: ../../logo.jpg
+
+format:
+  report-html: default
+  report-pdf:
+    keep-tex: true
+
+knitr:
+  opts_chunk:
+    echo: false

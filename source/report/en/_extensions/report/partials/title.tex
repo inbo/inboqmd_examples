@@ -1,0 +1,76 @@
+$if(title)$
+\title{$title$}
+$endif$
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+\author{
+$for(book.author)$$book.author.firstname$ $book.author.name$$sep$, $endfor$
+}
+\colophonauthor{
+$for(book.author)$$if(book.author.orcid)$\href{https://orcid.org/$book.author.orcid$}{$endif$$book.author.firstname$ $book.author.name$$if(book.author.orcid)$\includegraphics[height=\fontsizebase]{orcid.eps}}$endif$$sep$, $endfor$
+}
+$if(inboqmd.shortauthor)$
+\shortauthor{$inboqmd.shortauthor$}
+$endif$
+$for(book.author)$$if(book.author.corresponding)$$if(book.author.corresponding)$\corresponding{$book.author.email$}$endif$$endif$$endfor$
+\reviewer{
+$for(inboqmd.reviewer)$$if(inboqmd.reviewer.orcid)$\href{https://orcid.org/$inboqmd.reviewer.orcid$}{$endif$$inboqmd.reviewer.firstname$ $inboqmd.reviewer.name$$if(inboqmd.reviewer.orcid)$\includegraphics[height=\fontsizebase]{orcid.eps}}$endif$$sep$, $endfor$
+}
+\pubyear{$inboqmd.year$}
+$if(book.doi)$
+\doi{$book.doi$}
+$endif$
+
+$if(inboqmd.cover_description)$
+\coverdescription{$inboqmd.cover_description$}
+$endif$
+$if(inboqmd.cooperation)$
+\cooperation{
+\textbf{\cfcoop}\\
+   $for(inboqmd.cooperation)$
+      $inboqmd.cooperation$
+   $sep$ \\
+   $endfor$
+   $if(inboqmd.cooperation_logo)$
+   \\ \vspace \fontsizebase
+   \includegraphics[height = 15mm, keepaspectratio]{$inboqmd.cooperation_logo$}
+   $endif$
+}
+$endif$
+$if(inboqmd.client)$
+\client{
+\textbf{\cfclient}\\
+   $for(inboqmd.client)$
+      $inboqmd.client$
+   $sep$ \\
+   $endfor$
+   $if(inboqmd.client_logo)$
+   \\ \vspace{\fontsizebase} \includegraphics[height = 15mm, keepaspectratio]{$inboqmd.client_logo$}
+   $endif$
+}
+$endif$
+\citetitle{$title$$if(subtitle)$. $subtitle$$endif$}
+
+$if(inboqmd.geraardsbergen)$
+\establishment{Geraardsbergen}
+$else$
+\establishment{Brussel}
+$endif$
+$if(inboqmd.reportnr)$
+\reportnr{$inboqmd.reportnr$}
+$endif$
+$if(inboqmd.depotnr)$
+\depotnr{$inboqmd.depotnr$}
+$endif$
+$if(inboqmd.ordernr)$\ordernumber{$inboqmd.ordernr$}$endif$
+$if(inboqmd.nocolophon)$\colophon{0}$else$\colophon{1}$endif$
+$if(inboqmd.cover)$
+\includepdf[pages=1]{$inboqmd.cover$}
+$endif$
+
+$if(scheme)$
+\colourscheme{$scheme$}
+$endif$
+
+\usepackage{report-language}

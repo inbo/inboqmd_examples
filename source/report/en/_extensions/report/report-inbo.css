@@ -1,0 +1,24 @@
+:root {
+  --heading-color: #356196;
+}
+body:lang(nl-BE) {
+  color: #595959;
+}
+h1:lang(nl-BE){
+  color: var(--heading-color);
+}
+h2:lang(nl-BE){
+  color: var(--heading-color);
+}
+h3:lang(nl-BE){
+  color: var(--heading-color);
+}
+h4:lang(nl-BE){
+  color: var(--heading-color);
+}
+h5:lang(nl-BE){
+  color: var(--heading-color);
+}
+h6:lang(nl-BE){
+  color: var(--heading-color);
+}

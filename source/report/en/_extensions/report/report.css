@@ -1,0 +1,143 @@
+:root {
+  --text-color: #000000;
+  --header-color: #000000;
+}
+
+@font-face {
+  font-family: flanders-art-sanslight;
+  src: url("FlandersArtSans-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: flanders-art-sansmedium;
+  src: url("FlandersArtSans-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: flanders-art-sansregular;
+  src: url("FlandersArtSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: flanders-art-sansbold;
+  src: url("FlandersArtSans-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: flanders-art-sans;
+  src: url("FlandersArtSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: flanders-art-sans;
+  src: url("FlandersArtSans-Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: flanders-art-sans;
+  src: url("FlandersArtSans-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: flanders-art-sans;
+  src: url("FlandersArtSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: inconsolata;
+  src: url("Inconsolata-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: inconsolata;
+  src: url("Inconsolata-Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: inconsolata;
+  src: url("Inconsolata-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: inconsolata;
+  src: url("Inconsolata-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "flanders-art-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  background-image: url(img/background-pattern.png);
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: center center;
+}
+
+.ccby {
+  background-image: url(img/cc-by.svg);
+}
+
+h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+  line-height: 1.7;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  margin-top: 0;
+  margin-bottom: .85em;
+  color: var(--header-color);
+}
+
+h2 {
+  font-size: 2.6em;
+  font-weight: 700;
+  line-height: 1.7;
+  word-wrap: break-word;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--header-color);
+}
+
+.header-section-number {
+  color: var(--header-color);
+}
+
+p {
+  margin-bottom: .85em;
+}
+
+code {
+  font-family: inconsolata, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: var(--text-color);
+  white-space: normal;
+}
+
+.content {
+  background-color: #ffffff;
+}
+
+.sidebar {
+  background-color: #ffffff;
+}
+
+img.cc{
+  height: 1.6rem !important;
+}
+
+#title-block-header.quarto-title-block.default .quarto-title-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

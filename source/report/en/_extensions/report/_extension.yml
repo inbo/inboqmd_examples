@@ -1,0 +1,55 @@
+title: format template for reports of the Research Institute for Nature and Forest
+subtitle: English version using the corporate identity of the Flemish government
+author: Thierry Onkelinx
+version: 0.0.1
+contributes:
+  format:
+    common:
+      knitr:
+        opts_chunk:
+          echo: false
+      lang: nl-BE
+      scheme: flanders
+      csl: research-institute-for-nature-and-forest.csl
+    html:
+      template: "html/template.html"
+      template-partials:
+        - "partials/title-block.html"
+        - "partials/title-metadata.html"
+        # - "partials/toc.html"
+      filters:
+        - "translations.lua"
+      format-resources:
+        - "report.css"
+        - "report-inbo.css"
+        - "fonts/FlandersArtSans-Bold.ttf"
+        - "fonts/FlandersArtSans-Light.ttf"
+        - "fonts/FlandersArtSans-Medium.ttf"
+        - "fonts/FlandersArtSans-Regular.ttf"
+        - "fonts/Inconsolata-Bold.ttf"
+        - "fonts/Inconsolata-Light.ttf"
+        - "fonts/Inconsolata-Medium.ttf"
+        - "fonts/Inconsolata-Regular.ttf"
+      number-sections: true
+      toc: true
+    pdf:
+      template-partials:
+        - "partials/doc-class.tex"
+        - "partials/pandoc.tex"
+        - "partials/title.tex"
+      format-resources:
+        - "img/cc-by.eps"
+        - "img/flanders.pdf"
+        - "img/inbo-logo.pdf"
+        - "img/orcid.eps"
+        - "img/vlaamse-overheid.pdf"
+        - "img/vlaanderen-wetenschap.pdf"
+        - "tex/report-generic.sty"
+        - "tex/report-language.sty"
+      pdf-engine: xelatex
+      toc: false
+      lof: false
+      lot: false
+      mainfont: Calibri
+      monofont: Inconsolata
+      link-citations: true
