@@ -7,3 +7,10 @@
 .httr-oauth
 docs
 output
+source/report/en/*.css
+source/report/en/*.eps
+source/report/en/*.pdf
+source/report/en/*.sty
+source/report/en/*.tex
+source/report/en/*.ttf
+source/report/en/_freeze

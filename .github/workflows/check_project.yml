@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     name: "Run required package checks"
     steps:
-      - uses: inbo/actions/check_project@master
+      - uses: inbo/actions/check_project@token
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

@@ -22,8 +22,8 @@ $if(book.doi)$
 \doi{$book.doi$}
 $endif$
 
-$if(inboqmd.cover_description)$
-\coverdescription{$inboqmd.cover_description$}
+$if(inboqmd.cover-description)$
+\coverdescription{$inboqmd.cover-description$}
 $endif$
 $if(inboqmd.cooperation)$
 \cooperation{
@@ -32,9 +32,9 @@ $if(inboqmd.cooperation)$
       $inboqmd.cooperation$
    $sep$ \\
    $endfor$
-   $if(inboqmd.cooperation_logo)$
+   $if(inboqmd.cooperation-logo)$
    \\ \vspace \fontsizebase
-   \includegraphics[height = 15mm, keepaspectratio]{$inboqmd.cooperation_logo$}
+   \includegraphics[height = 15mm, keepaspectratio]{$inboqmd.cooperation-logo$}
    $endif$
 }
 $endif$
@@ -45,8 +45,8 @@ $if(inboqmd.client)$
       $inboqmd.client$
    $sep$ \\
    $endfor$
-   $if(inboqmd.client_logo)$
-   \\ \vspace{\fontsizebase} \includegraphics[height = 15mm, keepaspectratio]{$inboqmd.client_logo$}
+   $if(inboqmd.client-logo)$
+   \\ \vspace{\fontsizebase} \includegraphics[height = 15mm, keepaspectratio]{$inboqmd.client-logo$}
    $endif$
 }
 $endif$
@@ -65,9 +65,6 @@ $if(inboqmd.depotnr)$
 $endif$
 $if(inboqmd.ordernr)$\ordernumber{$inboqmd.ordernr$}$endif$
 $if(inboqmd.nocolophon)$\colophon{0}$else$\colophon{1}$endif$
-$if(inboqmd.cover)$
-\includepdf[pages=1]{$inboqmd.cover$}
-$endif$
 
 $if(scheme)$
 \colourscheme{$scheme$}

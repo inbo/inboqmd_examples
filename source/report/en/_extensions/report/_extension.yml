@@ -2,6 +2,7 @@ title: format template for reports of the Research Institute for Nature and Fore
 subtitle: English version using the corporate identity of the Flemish government
 author: Thierry Onkelinx
 version: 0.0.1
+quarto-required: ">=1.2.313"
 contributes:
   format:
     common:
@@ -16,7 +17,6 @@ contributes:
       template-partials:
         - "partials/title-block.html"
         - "partials/title-metadata.html"
-        # - "partials/toc.html"
       filters:
         - "translations.lua"
       format-resources:
@@ -34,6 +34,7 @@ contributes:
       toc: true
     pdf:
       template-partials:
+        - "partials/before-body.tex"
         - "partials/doc-class.tex"
         - "partials/pandoc.tex"
         - "partials/title.tex"
