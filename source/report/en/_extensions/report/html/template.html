@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+
+<head>
+
+$metadata.html()$
+
+<style>
+$styles.html()$
+</style>
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$if(math)$
+  $math$
+$endif$
+
+<link rel="stylesheet" href="report.css" />
+<link rel="stylesheet" href="report-$scheme$.css" />
+</head>
+
+<body>
+
+$for(include-before)$
+$include-before$
+$endfor$
+
+$if(title)$
+$title-block.html()$
+$endif$
+
+$if(toc)$
+$toc.html()$
+$endif$
+
+$body$
+
+<p>&nbsp;</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-License" style="border-width:0" src="_extensions/report/img/cc-by.svg" class = "cc"/></a>
+$if(inboqmd.shortauthor)$ $inboqmd.shortauthor$ $else$ <h1 class = "missing">!!! Missing shortauthor !!!</h1> $endif$ ($if(inboqmd.year)$$inboqmd.year$$else$<h1 class = "missing">!!! Missing year !!!</h1>$endif$). $if(book.doi)$<a href="https://doi.org/$doi$">$book.doi$</a>$else$<h1 class = "missing">!!! Missing DOI !!!</h1>$endif$
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+</body>
+
+</html>

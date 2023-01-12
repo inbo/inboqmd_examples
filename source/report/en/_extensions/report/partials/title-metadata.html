@@ -1,0 +1,166 @@
+<div class="quarto-title-meta">
+  <div>
+    <div class="quarto-title-meta-heading">$translation.author$</div>
+    <div class="quarto-title-meta-contents">
+      $if(book.author)$
+      $for(book.author)$
+       <p>
+         $if(book.author.email)$<a href= "mailto:$book.author.email$">$endif$
+         $if(book.author.firstname)$$book.author.firstname$$else$<h1 class = "missing">!!! Missing author.firstname !!!</h1>$endif$
+         $if(book.author.name)$$book.author.name$$else$<h1 class = "missing">!!! Missing author.name !!!</h1>$endif$
+         $if(book.author.email)$</a>$endif$
+         $if(book.author.orcid)$<a href="https://orcid.org/$book.author.orcid$" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>$endif$</p>
+      $endfor$
+      $else$ <h1 class = "missing">!!! Missing author !!!</h1>
+      $endif$
+    </div>
+    <div class="quarto-title-meta-heading">$translation.reviewer$</div>
+    <div class="quarto-title-meta-contents">
+      $if(inboqmd.reviewer)$
+      $for(inboqmd.reviewer)$
+       <p>
+          $if(inboqmd.reviewer.email)$<a href= "mailto:$inboqmd.reviewer.email$">$endif$
+          $if(inboqmd.reviewer.firstname)$$inboqmd.reviewer.firstname$$else$<h1 class = "missing">!!! Missing reviewer.firstname !!!</h1>$endif$
+          $if(inboqmd.reviewer.name)$$inboqmd.reviewer.name$$else$<h1 class = "missing">!!! Missing reviewer.name !!!</h1>$endif$
+          $if(inboqmd.reviewer.email)$</a>$endif$
+          $if(inboqmd.reviewer.orcid)$<a href="https://orcid.org/$inboqmd.reviewer.orcid$" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>$endif$</p>
+      $endfor$$else$
+      <h1 class = "missing">!!! Missing reviewer !!!</h1>
+      $endif$
+    </div>
+  </div>
+
+  <div>
+    <div class="quarto-title-meta-heading">$translation.year$</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">
+        $if(inboqmd.year)$
+        $inboqmd.year$
+        $else$
+        <h1 class = "missing">!!! Missing year !!!</h1>
+        $endif$
+    </div>
+
+    <div class="quarto-title-meta-heading">DOI</div>
+    <div class="quarto-title-meta-contents">
+      <p class="doi">
+        $if(book.doi)$
+        <a href="https://doi.org/$doi$">$book.doi$</a>
+        $else$
+        <h1 class = "missing">!!! Missing DOI !!!</h1>
+        $endif$
+      </p>
+    </div>
+
+    $if(inboqmd.ordernr)$
+    <div class="quarto-title-meta-heading">$translation.ordernr$</div>
+    <div class="quarto-title-meta-contents">
+      <p>$inboqmd.ordernr$</p>
+    </div>
+    $endif$
+  </div>
+
+  <div>
+    <div class="quarto-title-meta-heading">$translation.depotnr$</div>
+    <div class="quarto-title-meta-contents">
+      <p>
+        $if(inboqmd.depotnr)$
+        $inboqmd.depotnr$
+        $else$
+        <h1 class = "missing">!!! Missing depotnr !!!</h1>
+        $endif$
+    </div>
+
+    <div class="quarto-title-meta-heading">ISSN</div>
+    <div class="quarto-title-meta-contents">
+      <p>1782-9054</p>
+    </div>
+    <div class="quarto-title-meta-heading">$translation.vu$</div>
+    <div class="quarto-title-meta-contents">
+      <p>Maurice Hoffmann</p>
+    </div>
+  </div>
+
+</div>
+<div class="quarto-title-meta-contents">$translation.mission$
+</div>
+
+<div>
+  <div class="quarto-title-meta-heading">$translation.location$</div>
+  <div class="quarto-title-meta-contents">
+    INBO $if(geraardsbergen)$
+      Geraardsbergen <br>
+      Gaverstraat 4, 9500 Geraardsbergen
+    $else$
+      $translation.brussels$ <br>
+      Herman Teirlinckgebouw, Havenlaan 88 bus 73, 1000 $translation.brussels$
+    $endif$ $translation.country$ <br>
+    <a href = "https:/www.vlaanderen.be/inbo">vlaanderen.be/inbo</a>
+  </div>
+  <div class="quarto-title-meta-heading">$translation.citation$</div>
+  <div class="quarto-title-meta-contents">
+    $if(inboqmd.shortauthor)$ $inboqmd.shortauthor$ $else$ <h1 class = "missing">!!! Missing shortauthor !!!</h1> $endif$
+    ($if(inboqmd.year)$$inboqmd.year$$else$<h1 class = "missing">!!! Missing year !!!</h1>$endif$). $book.title$. $if(inboqmd.subtitle)$$inboqmd.subtitle$.$endif$ $translation.series$ $translation.name$ $date$ ($inboqmd.reportnr$). $translation.name$, $translation.brussels$. DOI: <a href="https://doi.org/$book.doi$">$book.doi$ </a>
+</div>
+
+<div>
+  $translation.export$ <button onclick="display_export('bibtex')" style = "color: #4183c4; background: #fff; border-width: 0px;">BibTex</button>
+  <button onclick="display_export('RIS')" style = "color: #4183c4; background: #fff; border-width: 0px;">RIS</button>
+  <button onclick="display_export('csl')" style = "color: #4183c4; background: #fff; border-width: 0px;">CSL-JSON</button>
+
+<script>
+function display_export(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<pre id = "bibtex" style ="display: none;">
+@TechReport{
+  $for(book.author)$$book.author.name$$endfor$$inboqmd.year$,
+  author= {$for(book.author)$ $book.author.name$, $book.author.firstname$$sep$ and $endfor$},
+  title = {$book.title$$if(inboqmd.subtitle)$. $inboqmd.subtitle$$endif$},
+  institution = {$translation.name$},
+  adress = {$if(inboqmd.geraardsbergen)$Geraardsbergen$else$$translation.brussels$$endif$$translation.country$},
+  year = {$inboqmd.year$},
+  number = {$inboqmd.year$ ($inboqmd.reportnr$)},
+  doi = {$book.doi$},
+  type = {techreport}
+}
+</pre>
+
+<pre id = "RIS" style ="display: none;">
+TY  - RPRT
+$for(book.author)$AU  - $book.author.name$, $book.author.firstname$$sep$ <br>$endfor$
+TI  - $book.title$$if(inboqmd.subtitle)$. $inboqmd.subtitle$$endif$
+DO  - $book.doi$
+PB  - $translation.name$
+PP  - $if(inboqmd.geraardsbergen)$Geraardsbergen$else$$translation.brussels$$endif$$translation.country$
+PY  - $inboqmd.year$
+SN  - 1782-9054
+ER  -
+</pre>
+
+<pre id = "csl" style ="display: none;">
+{
+  "id":"$for(book.author)$$book.author.name$$endfor$$book.year$",
+  "type":"report",
+  "title":"$book.title$$if(inboqmd.subtitle)$. $inboqmd.subtitle$$endif$.",
+  "author":[
+    $for(book.author)${
+      "family":"$book.author.name$",
+      "given":"$book.author.firstname$"
+    $sep$},
+    $endfor$
+    }
+  ],
+  "issued":{"date-parts":[[$inboqmd.year$]]},
+  "publisher":" "$translation.name$",
+  "publisher-place":"$if(inboqmd.geraardsbergen)$Geraardsbergen$else$$translation.brussels$$endif$$translation.country$",
+}
+</pre>
+</div>
